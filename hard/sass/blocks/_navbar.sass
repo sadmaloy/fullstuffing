@@ -16,6 +16,8 @@
         font-weight: 400
     &__button
         margin-left: 30px
+        padding: 18px 32px
+        margin-bottom: 5px
         color: $text-color
         font-size: 13px
         font-weight: 400    
@@ -30,5 +32,25 @@
     .navbar 
         &__contacts
             display: none
-
+@media (max-width: 567px)
+    .button
+        padding: 0
+        border-radius: 5px
+    .navbar
+        &-block
+            display: flex
+            justify-content: space-between
+            margin-right: 14px
+            
+        &__contacts
+            display: none
+        &__button
+            font-size: 10px
+            font-weight: 400 
+            margin-bottom: 5px
+            padding: 14px 27px
+            
+        &__logo
+            width: 91px
+            
        

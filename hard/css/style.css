@@ -31,6 +31,12 @@ img {
   padding: 18px 30px;
 }
 
+@media (max-width: 567px) {
+  .container {
+    width: 290px;
+  }
+}
+
 .navbar {
   padding: 7px 0;
 }
@@ -57,6 +63,8 @@ img {
 
 .navbar__button {
   margin-left: 30px;
+  padding: 18px 32px;
+  margin-bottom: 5px;
   color: #333333;
   font-size: 13px;
   font-weight: 400;
@@ -74,5 +82,29 @@ img {
 @media (max-width: 768px) {
   .navbar__contacts {
     display: none;
+  }
+}
+
+@media (max-width: 567px) {
+  .button {
+    padding: 0;
+    border-radius: 5px;
+  }
+  .navbar-block {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 14px;
+  }
+  .navbar__contacts {
+    display: none;
+  }
+  .navbar__button {
+    font-size: 10px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    padding: 14px 27px;
+  }
+  .navbar__logo {
+    width: 91px;
   }
 }
