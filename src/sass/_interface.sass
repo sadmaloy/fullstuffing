@@ -1,3 +1,5 @@
+*
+    box-sizing: border-box
 body
     font-family: sans-serif
 img
@@ -11,9 +13,12 @@ img
 @media (max-width: 768px)
     .container
         max-width: 580px
-        width: 95%    
+        width: 90%    
 .button
     border-radius: 10px
     background-color: $main-color
     border: none 
     padding: 18px 30px
+@media (max-width: 567px)
+    .container
+        width: 290px     
