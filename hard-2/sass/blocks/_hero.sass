@@ -1,0 +1,86 @@
+main
+    background-color: #f5f5f5
+.hero
+    padding: 50px 0 
+    &-block 
+        display: flex 
+        justify-content: space-between  
+    &-text 
+        flex-basis: 50%
+        
+        &__title
+            color: $text-color
+            font-size: 41px
+            font-weight: 400
+            line-height: 55px 
+            margin-bottom: 37px 
+            +bold
+            
+        &__subtitle
+            display: inline-block
+            color: $text-color
+            font-size: 20px
+            font-weight: 400
+            margin-bottom: 69px
+            +bold
+    &-list
+        margin: 0
+        padding: 0 
+        &__item
+            display: flex
+            align-items: center 
+            margin-bottom: 25px
+        &__image
+            width: 40px
+            height: 40px
+            border: 2px solid $main-color
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 50%
+            margin-right: 30px
+        &__text
+            color: $text-color
+            font-size: 14px
+            font-weight: 400
+            line-height: 24px
+            max-width: 250px
+@media (max-width: 1200px) 
+    .hero
+        &-block
+            flex-direction: column
+        &-list
+            margin-bottom: 44px
+        &-text
+            padding-right: 10px  
+@media (max-width: 768px)
+    .hero
+        padding-top: 23px
+        padding-left: 17px
+        &-text
+            
+            &__title
+                font-size: 24px
+                line-height: 1.2
+                margin-bottom: 11px
+                margin-left: 1px
+                
+            &__subtitle
+                margin-left: 3px
+                font-size: 16px
+                margin-bottom: 28px
+                width: 200px
+        &-list
+            margin-bottom: 38px
+            &__item
+                margin-bottom: 20px
+            &__text
+                font-size: 12px
+                line-height: 1.4
+            &__image
+                margin-right: 15px 
+                min-width: 40px                                     
+        &-image 
+            width: 270px
+            height: 231px  
+            padding-right: 1px     
