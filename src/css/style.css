@@ -431,3 +431,44 @@ img {
     line-height: 24px;
   }
 }
+
+@media (max-width: 567px) {
+  .offer {
+    padding: 37px 42px 20px 22px;
+    background: #ffffff;
+  }
+  .offer-block {
+    width: 274px;
+    padding-right: 0;
+  }
+  .offer__title {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  .offer__subtitle {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  .offer__input {
+    padding: 21px 21px;
+  }
+  .offer__button {
+    margin-top: 1px;
+    padding: 19px 62px;
+    font-size: 13px;
+    line-height: 18px;
+    border-radius: 11px;
+    margin-bottom: -5px;
+  }
+  .offer__feedback {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+  }
+  .offer__first {
+    margin-bottom: 8px;
+  }
+  .offer__text {
+    line-height: 24px;
+  }
+}
