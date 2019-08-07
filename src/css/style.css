@@ -514,8 +514,13 @@ img {
   cursor: pointer;
   color: #333;
   font-size: 25px;
+  border-radius: 13px;
 }
 
 .button-up:focus {
   outline: none;
+}
+
+.button-up:hover {
+  border: 1px solid #ffba39;
 }
