@@ -325,7 +325,6 @@ img {
   max-width: 350px;
   line-height: 35px;
   margin-bottom: 20px;
-  text-align: left;
 }
 
 .offer__subtitle {
@@ -475,6 +474,10 @@ img {
   .offer__text {
     line-height: 24px;
   }
+}
+
+.success {
+  margin-top: 10px;
 }
 
 .modal {
