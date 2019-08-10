@@ -321,6 +321,7 @@ img {
   max-width: 350px;
   line-height: 35px;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .offer__subtitle {
