@@ -1,0 +1,131 @@
+.offer
+    background: url(../img/offer/offer-bg.png) no-repeat
+    background-position: center right
+    background-size: contain
+    position: relative
+    &:before
+        content: ''
+        width: 50%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background-color: #fff
+    &-block 
+        width: 50%
+        padding-right: 90px
+        position: relative
+    &__title
+        max-width: 350px 
+        line-height: 35px
+        margin-bottom: 20px
+    &__subtitle
+        display: block
+        max-width: 250px
+        margin-bottom: 30px
+    &__input
+        width: 240px
+        margin-bottom: 30px
+        &:first-child
+            margin-right: 10px 
+        &:focus
+            outline: none
+            border: 1px solid #ffba39
+                
+    &__button
+        width: 100% 
+        min-height: 70px 
+        +bold   
+    &__first
+        width: 230px
+        color: #333333
+        font-size: 15px
+        line-height: 24px 
+    &__second
+        color: #333333
+        font-size: 15px
+        line-height: 24px 
+        padding-right: 10px
+    &__text
+        display: block
+    &__phone
+        color: #333333
+        font-size: 15px
+        line-height: 24px
+        text-decoration: none 
+        +bold   
+@media (max-width: 1200px)  
+    .offer
+        background-size: cover
+        &__input
+            width: 100%
+            margin-bottom: 10px      
+        &__button
+            font-size: 12px
+
+@media (max-width: 768px)
+    .offer
+        padding: 37px 42px 20px 22px
+        background: #ffffff
+        &-block
+            width: 100%
+            padding-right: 0
+        &__title
+            font-size: 18px
+            line-height: 1.2   
+            
+        &__subtitle
+            font-size: 14px
+            line-height: 1.2
+        &__input
+            padding: 21px 21px
+        &__button
+            margin-top: 1px
+            padding: 19px 62px
+            font-size: 18px
+            line-height: 18px 
+            border-radius: 11px 
+            margin-bottom: -5px
+        &__feedback
+            display: flex
+            flex-direction: row
+            margin-left: 5px 
+        &__first
+            margin-bottom: 8px   
+        &__text
+            line-height: 24px 
+@media (max-width: 567px)
+    .offer
+        padding: 37px 42px 20px 22px
+        background: #ffffff
+        &-block
+            width: 274px
+            padding-right: 0
+        &__title
+            font-size: 18px
+            line-height: 1.2   
+            
+        &__subtitle
+            font-size: 14px
+            line-height: 1.2
+        &__input
+            padding: 21px 21px
+        &__button
+            margin-top: 1px
+            padding: 19px 62px
+            font-size: 13px
+            line-height: 18px 
+            border-radius: 11px 
+            margin-bottom: -5px
+        &__feedback
+            display: flex
+            flex-direction: column
+            margin-left: 5px 
+        &__first
+            margin-bottom: 8px   
+        &__text
+            line-height: 24px                   
+.success
+    margin-top: 10px        
+            
+            
