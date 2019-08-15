@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: 'Museo Sans Light';
   src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot");
@@ -531,6 +530,39 @@ b {
 
 .modal-column {
   flex-basis: 50%;
+}
+
+.call {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.call_active {
+  display: flex;
+}
+
+.call-dialog {
+  position: relative;
+  margin: auto;
+  max-width: 450px;
+  width: 90%;
+  min-height: 200px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.call-dialog__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 5px;
+  border: 0;
 }
 
 .button-up {
@@ -1182,37 +1214,4 @@ b {
     width: 100%;
     top: 450px;
   }
-}
-
-.сall {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-}
-
-.сall_active {
-  display: flex;
-}
-
-.сall-dialog {
-  border-radius: 10px;
-  position: relative;
-  margin: auto;
-  max-width: 450px;
-  width: 90%;
-  min-height: 200px;
-  background-color: #fff;
-  padding: 40px;
-}
-
-.сall-dialog__close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-radius: 5px;
-  border: 0;
 }
