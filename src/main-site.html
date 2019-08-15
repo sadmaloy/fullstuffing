@@ -149,7 +149,7 @@
                         <div class="card__text">
                             <h4 class="card__title">Ремонт ванных комнат и с/у</h4>
                             <!-- /.card__title -->
-                            <a href="#" class="card__link">Узнать цены</a>
+                            <a href="#" data-target="bath" class="card__link">Узнать цены</a>
                             <!-- /.card__link -->
                         </div>
                         <!-- /.card__text -->
@@ -161,7 +161,7 @@
                         <div class="card__text">
                             <h4 class="card__title">Ремонт комнат и квартир</h4>
                             <!-- /.card__title -->
-                            <a href="#" class="card__link">Узнать цены</a>
+                            <a href="#" data-target="living" class="card__link">Узнать цены</a>
                             <!-- /.card__link -->
                         </div>
                         <!-- /.card__text -->
@@ -173,7 +173,7 @@
                         <div class="card__text">
                             <h4 class="card__title">Отделка офисных помещений</h4>
                             <!-- /.card__title -->
-                            <a href="#" class="card__link">Узнать цены</a>
+                            <a href="#" data-target="office" class="card__link">Узнать цены</a>
                             <!-- /.card__link -->
                         </div>
                         <!-- /.card__text -->
@@ -370,15 +370,38 @@
         <div class="modal-dialog">
             <button class="modal-dialog__close" id="close">&times;</button>
             <div class="modal-column">
-                <div class="modal-content"></div>
+                <div class="modal-content">Контент</div>
             </div>
             <div class="modal-column">
-
+                <h3 class="form__title">Узнайте точную стоимость ремонта по телефону!</h3>
+                <span class="form__subtitle">Заполните поля ниже - мы свяжемся с Вами</span>
+                <form action="#" id="brif-form">
+                    <input type="text" name="username" class="input brif__input" placeholder="Ваше имя">
+                    <input type="tel" name="phone" class="input brif__input phone" placeholder="Ваш телефон">
+                    <button class="button brif__button">Узнать стоимость</button>
+                    <span class="form__description">Или Вы можете перезвонить нам сами по телефону: <a href="tel: +7(8182)42-51-31" class="contacts-list__phone">+7 (8182) 42-51-31</a></span>
+                </form>
             </div>
         </div>
         <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
+
+    <div class="call" id="call">
+        <div class="call-dialog">
+            <button class="call-dialog__close" id="close-call">&times;</button>
+            <h3 class="form__title">Узнайте точную стоимость ремонта по телефону!</h3>
+            <span class="form__subtitle">Заполните поля ниже - мы свяжемся с Вами</span>
+            <form action="#" id="brif-form">
+                <input type="text" name="username" class="input brif__input" placeholder="Ваше имя">
+                <input type="tel" name="phone" class="input brif__input phone" placeholder="Ваш телефон">
+                <button class="button brif__button">Узнать стоимость</button>
+                <span class="form__description">Или Вы можете перезвонить нам сами по телефону: <a href="tel: +7(8182)42-51-31" class="contacts-list__phone">+7 (8182) 42-51-31</a></span>
+            </form>
+        </div>
+        <!-- /.call-dialog -->
+    </div>
+    <!-- /.call -->
 
     <div class="modal-offer" id="modal-offer">
         <div class="modal-block">
@@ -395,6 +418,7 @@
     <!--<script src="js/main.js"></script>-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/modal.js"></script>
+    <script src="js/modal-price.js"></script>
     <script src="js/button-up.js"></script>
     <script src="js/offer.js"></script>
     <script src="js/modal-offer.js"></script>

@@ -1,14 +1,13 @@
 $(document).ready(function(){
     var button = $('#button');
-    var modal = $('#modal');
-    var close = $('#close');
-
+    var modal = $('#call');
+    var close = $('#close-call');
 
     button.on('click', function() {
-        modal.addClass('modal_active');
+        modal.addClass('call_active');
     });
 
     close.on('click', function() {
-        modal.removeClass('modal_active');
+        modal.removeClass('call_active');
     });
 });
