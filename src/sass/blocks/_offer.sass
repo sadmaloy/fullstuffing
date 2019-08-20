@@ -15,7 +15,12 @@
         width: 50%
         padding-right: 90px
         position: relative
+    &-errors 
+        display: flex
+        &__out
+            flex-direction: column   
     &__title
+        margin-top: 15px
         max-width: 350px 
         line-height: 35px
         margin-bottom: 20px
@@ -32,7 +37,8 @@
         &:focus
             outline: none
             border: 1px solid #ffba39
-                
+    &__feedback
+        margin-top: -10px      
     &__button
         width: 100% 
         min-height: 70px 
@@ -55,8 +61,11 @@
         line-height: 24px
         text-decoration: none 
         +bold   
+   
 @media (max-width: 1200px)  
     .offer
+        &-errors
+            flex-direction: column
         background-size: cover
         &__input
             width: 100%

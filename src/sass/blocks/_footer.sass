@@ -1,10 +1,5 @@
 .footer
     position: relative
-.map
-    width: 50%
-    position: absolute
-    left: 0
-    top: 0
 .contacts
     flex-basis: 50%
     padding-top: 65px
@@ -15,14 +10,13 @@
         font-size: 22px
         line-height: 1.6
         +bold
-        margin-bottom: 100px
+        margin-bottom: 85px
     &-block 
         display: flex
         justify-content: flex-end 
     &-list
         padding: 0
         list-style: none
-        margin-top: -12px
         &__icon
             width: 20px
             height: 20px 
@@ -41,22 +35,110 @@
             color: $text-price 
 @media (max-width: 768px) 
     .contacts
-        margin-right: -50px
-@media (max-width: 567px) 
-    .contacts
+        width: 100%
         padding: 0
         padding-top: 45px
-        margin-right: 39px
+        padding-left: 50px
         &__title
             width: 240px
             font-size: 18px
-            margin-bottom: 47px
+            margin-bottom: 35px
             line-height: 1.2
         &-list
             &__icon
                 margin-right: 15px      
-    .map
+.ymap-container 
+  position: absolute
+  overflow: hidden
+  cursor: pointer
+  background: url('../img/yandex-before-load.png') #ffffff no-repeat
+  background-position: center center
+  background-size: cover
+  width: 50%
+
+
+#map-yandex 
+  position: relative
+  z-index: 7
+  width: 100%
+  height: 640px
+  cursor: pointer
+  background-color: transparent
+
+/*Индикатор загрузки, который показывается до загрузки карты*/
+.loader 
+  position: absolute
+  z-index: 15
+  top: -100%
+  left: 0
+  box-sizing: border-box
+  width: 100%
+  height: 100%
+  overflow: hidden
+  color: #000000
+  transition: opacity .7s ease
+  opacity: 0
+  background-color: rgba(0,0,0,.55)
+
+.loader:after,
+.loader:before 
+  box-sizing: border-box
+
+.loader.is-active 
+  top: 0
+  opacity: 1
+
+
+.loader-default:after 
+  position: absolute
+  top: calc(50% - 24px)
+  left: calc(50% - 24px)
+  width: 48px
+  height: 48px
+  content: ''
+  -webkit-animation: rotation 1s linear infinite
+  animation: rotation 1s linear infinite
+  border: solid 8px #ffffff
+  border-left-color: transparent
+  border-radius: 50%
+
+
+@-webkit-keyframes rotation 
+  from 
+    -webkit-transform: rotate(0)
+            transform: rotate(0)
+  
+  to 
+    -webkit-transform: rotate(359deg)
+            transform: rotate(359deg)
+  
+
+
+@keyframes rotation 
+  from 
+    -webkit-transform: rotate(0)
+            transform: rotate(0)
+  
+  to 
+    -webkit-transform: rotate(359deg)
+            transform: rotate(359deg)
+  
+
+@-webkit-keyframes blink 
+  from 
+    opacity: .5
+  
+  to 
+    opacity: 1
+  
+
+@keyframes blink 
+  from 
+    opacity: .5
+  
+  to 
+    opacity: 1
+@media (max-width: 567px)      
+    .ymap-container
         width: 100%
-        top: 450px
-    
-    
+        top: 450px    
