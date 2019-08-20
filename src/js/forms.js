@@ -1,4 +1,7 @@
 new WOW().init();
+var button = $('#btn-offer');
+var modal = $('#modal-offer');
+var close = $('#close-offer');
         $(document).ready(function() {
             $('#brif-form').validate({
                 rules: {
@@ -19,7 +22,21 @@ new WOW().init();
                     username: "Укажите Ваше имя",
                     email: "Укажите Ваш e-mail",
                     phone: "Укажите Ваш телефон"
-                }
+                },
+                submitHandler: function (form) {
+                    $.ajax({
+                          url: 'mail.php',
+                          type: 'GET',
+                          success: function () {
+                              modal.addClass('modal-offer_active');
+                              $('.modal-block').show();
+                              $('.modal-block__text').text('Спасибо за заявку, скоро мы вам перезвоним.');
+                              $('input').each(function () {
+                                $('input').val('');
+                              });
+                          }
+                    });
+                  }
             });
 
             $('#modal-form').validate({
@@ -36,7 +53,21 @@ new WOW().init();
                 messages: {
                     username: "Укажите Ваше имя",
                     phone: "Укажите Ваш телефон"
-                }
+                },
+                submitHandler: function (form) {
+                    $.ajax({
+                          url: 'mail.php',
+                          type: 'GET',
+                          success: function () {
+                              modal.addClass('modal-offer_active');
+                              $('.modal-block').show();
+                              $('.modal-block__text').text('Спасибо за заявку, скоро мы вам перезвоним.');
+                              $('input').each(function () {
+                                $('input').val('');
+                              });
+                          }
+                    });
+                  }
             });
 
             $('#call-form').validate({
@@ -53,36 +84,54 @@ new WOW().init();
                 messages: {
                     username: "Укажите Ваше имя",
                     phone: "Укажите Ваш телефон"
-                }
+                },
+                submitHandler: function (form) {
+                    $.ajax({
+                          url: 'mail.php',
+                          type: 'GET',
+                          success: function () {
+                              modal.addClass('modal-offer_active');
+                              $('.modal-block').show();
+                              $('.modal-block__text').text('Спасибо за заявку, скоро мы вам перезвоним.');
+                              $('input').each(function () {
+                                $('input').val('');
+                              });
+                          }
+                    });
+                  }
             });
 
             $('#offer-form').validate({
+                errorClass: "invalid",
+                errorElement: "div",
                 rules: {
-                    username: {
-                        required: true,
-                        minlength: 2,
-                        maxlength: 15
-                    },
-                    userphone: {
-                        required: true
-                    }
+                  username: {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 15
+                  },
                 },
                 messages: {
-                    username: "Укажите Ваше имя",
-                    userphone: "Укажите Ваш телефон"
+                  username: {
+                    required: "Введите имя",
+                    minlength: jQuery.validator.format("Требуется не менее {0} символов")
+                  }
                 },
                 submitHandler: function (form) {
-                    var form = this;
-                    $.ajax({
+                  $.ajax({
                         url: 'mail.php',
-                        type: 'POST',
-                        data: $(this).serialize()
-                    }).done(function() {
-                        form.reset();
-                    });
+                        type: 'GET',
+                        success: function () {
+                            modal.addClass('modal-offer_active');
+                            $('.modal-block').show();
+                            $('.modal-block__text').text('Спасибо за заявку, скоро мы вам перезвоним.');
+                            $('input').each(function () {
+                              $('input').val('');
+                            });
+                        }
+                  });
                 }
-                
-            });
+              });
 
             $('.phone').mask('+7 (999) 999-99-99');
             $('.slider').slick({

@@ -1566,6 +1566,7 @@ b {
   width: 100%;
   max-width: 370px;
   margin-bottom: 15px;
+  display: flex;
 }
 
 .brif__input:focus {
